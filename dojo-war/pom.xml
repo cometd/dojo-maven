@@ -3,7 +3,7 @@
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-project</artifactId>
-      <version>1.3-SNAPSHOT</version>
+      <version>1.3.0b1-SNAPSHOT</version>
       <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>org.dojotoolkit</groupId>
@@ -11,39 +11,36 @@
   <packaging>war</packaging>
   <name>Dojo Toolkit :: WAR</name>
   <properties>
-    <jetty.version>6.1.11</jetty.version>
+    <jetty.version>6.1.14</jetty.version>
+    <dojo.version>1.3.0b1</dojo.version>
   </properties>
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
-       <plugin>
+      <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <configuration>
             <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+            <warSourceDirectory>${project.build.directory}/dojo-release-${dojo.version}</warSourceDirectory>
           </configuration>
       </plugin>
-
-     <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>wagon-maven-plugin</artifactId>
+        <version>1.0-beta-1</version>
         <executions>
           <execution>
-            <id>unpack dojo</id>
-            <phase>generate-sources</phase>
+            <id>download-dojo</id>
+            <phase>generate-resources</phase>
             <goals>
-              <goal>unpack</goal>
+              <goal>download-single</goal>
             </goals>
             <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>org.dojotoolkit</groupId>
-                  <artifactId>dojo</artifactId>
-                  <version>${project.version}</version>
-                  <type>zip</type>
-                </artifactItem>
-              </artifactItems>
-              <outputDirectory>${project.build.directory}/dojo</outputDirectory>
+              <serverId>dojotoolkit</serverId>
+              <url>http://download.dojotoolkit.org/release-${dojo.version}</url>
+              <fromFile>dojo-release-${dojo.version}.tar.gz</fromFile>
+              <toDir>${project.build.directory}</toDir>
             </configuration>
           </execution>
         </executions>
@@ -54,24 +51,13 @@
         <artifactId>maven-antrun-plugin</artifactId>
         <executions>
           <execution>
-            <id>copy-release</id>
+            <id>unpack</id>
             <configuration>
-              <tasks>                
-                <copy todir="${project.build.directory}/${artifactId}-${version}">
-                 <fileset dir="${project.build.directory}/dojo/dojo-${version}"> 
-                   <include name="dojo/**" />                   
-                   <include name="dijit/**" />                   
-                   <include name="dojox/**" />                   
-                   <exclude name="**/docs/**" />                   
-                   <exclude name="**/demos/**" />                   
-                   <exclude name="**/tests/**" />                   
-                   <exclude name="**/*.orig" />                   
-                   <exclude name="**/*.rej" />                   
-                 </fileset>
-                </copy> 
+              <tasks>      
+                <untar compression="gzip" src="${project.build.directory}/dojo-release-${dojo.version}.tar.gz" dest="${project.build.directory}" />
               </tasks>
             </configuration>
-            <phase>process-sources</phase>
+            <phase>process-resources</phase>
             <goals>
               <goal>run</goal>
             </goals>
@@ -90,7 +76,6 @@
           </webAppConfig>
         </configuration>
       </plugin>
-
     </plugins>
   </build>
   <dependencies>
