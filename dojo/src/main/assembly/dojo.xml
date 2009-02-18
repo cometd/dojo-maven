@@ -6,7 +6,7 @@
   </formats>
   <fileSets>
     <fileSet>
-      <directory>${basedir}/../../../release/dojo</directory>
+      <directory>${project.build.directory}/dojo-release-${dojo.version}</directory>
       <outputDirectory></outputDirectory>
       <includes>
         <include>dojo/**</include>

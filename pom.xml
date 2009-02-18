@@ -172,7 +172,10 @@
     </pluginManagement>
   </build>
   <modules>
-<!--    <module>dojo</module> -->
+    <module>dojo</module>
     <module>dojo-war</module>
   </modules>
+  <properties>
+    <dojo.version>1.3.0b1</dojo.version>
+  </properties>
 </project>

@@ -12,7 +12,6 @@
   <name>Dojo Toolkit :: WAR</name>
   <properties>
     <jetty.version>6.1.14</jetty.version>
-    <dojo.version>1.3.0b1</dojo.version>
   </properties>
   <build>
     <defaultGoal>install</defaultGoal>
