@@ -115,6 +115,18 @@
   </scm>
   <build>
     <defaultGoal>install</defaultGoal>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <tagBase>https://svn.dojotoolkit.org/src/maven/tags</tagBase>
+          <useReleaseProfile>false</useReleaseProfile>
+          <goals>deploy</goals>
+          <preparationGoals>clean install</preparationGoals>
+        </configuration>
+      </plugin>
+    </plugins>
     <pluginManagement>
       <!-- fix plugin versions for repeatable releases -->
       <plugins>
