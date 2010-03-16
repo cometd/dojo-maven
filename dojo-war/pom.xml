@@ -3,7 +3,7 @@
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
-      <version>1.3.3-SNAPSHOT</version>
+      <version>1.4.2-SNAPSHOT</version>
       <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>org.dojotoolkit</groupId>
@@ -11,7 +11,7 @@
   <packaging>war</packaging>
   <name>Dojo Toolkit :: WAR</name>
   <properties>
-    <jetty.version>6.1.14</jetty.version>
+    <jetty.version>6.1.22</jetty.version>
   </properties>
   <build>
     <defaultGoal>install</defaultGoal>
