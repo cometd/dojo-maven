@@ -2,9 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.dojotoolkit</groupId>
   <artifactId>dojo-maven</artifactId>
-  <version>1.4.3-SNAPSHOT</version>
+  <version>1.4.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Dojo Toolkit</name>
+  <description>Maven packaging of the Dojo Toolkit</description>
   <url>http://dojotoolkit.org</url>
   <properties>
     <dojo.version>1.4.2</dojo.version>
@@ -62,20 +63,6 @@
   <repositories>
     <repository>
       <releases>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>dojo</id>
-      <name>Dojo Maven2 Repository</name>
-      <url>http://download.dojotoolkit.org/maven2</url>
-      <layout>default</layout>
-    </repository>
-    <repository>
-      <releases>
         <enabled>false</enabled>
       </releases>
       <snapshots>
@@ -85,7 +72,7 @@
       </snapshots>
       <id>dojoSnapshots</id>
       <name>Dojo Maven2 Snapshot Repository</name>
-      <url>http://download.dojotoolkit.org/maven2-snapshot</url>
+      <url>http://oss.sonatype.org/content/groups/dojo/</url>
       <layout>default</layout>
     </repository>
   </repositories>
