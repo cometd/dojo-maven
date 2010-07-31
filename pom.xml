@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.dojotoolkit</groupId>
   <artifactId>dojo-maven</artifactId>
-  <version>1.4.3</version>
+  <version>1.5.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Dojo Toolkit</name>
   <description>Maven packaging of the Dojo Toolkit</description>
@@ -99,9 +99,9 @@
     -->
   </distributionManagement>
   <scm>
-    <connection>scm:svn:http://svn.dojotoolkit.org/src/maven/tags/dojo-maven-1.4.3</connection>
-    <developerConnection>scm:svn:https://svn.dojotoolkit.org/src/maven/tags/dojo-maven-1.4.3</developerConnection>
-    <url>scm:svn:https://svn.dojotoolkit.org/src/maven/tags/dojo-maven-1.4.3</url>
+    <connection>scm:svn:http://svn.dojotoolkit.org/src/maven/trunk</connection>
+    <developerConnection>scm:svn:https://svn.dojotoolkit.org/src/maven/trunk</developerConnection>
+    <url>scm:svn:https://svn.dojotoolkit.org/src/maven/trunk</url>
   </scm>
   <build>
     <defaultGoal>install</defaultGoal>
