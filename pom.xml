@@ -214,6 +214,7 @@
   <modules>
     <module>dojo</module>
     <module>dojo-war</module>
+    <module>dojo-shrinksafe</module>
   </modules>
   <profiles>
     <profile>
