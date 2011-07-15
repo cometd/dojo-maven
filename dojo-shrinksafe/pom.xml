@@ -12,34 +12,23 @@
   <name>Dojo Toolkit :: Shrinksafe</name>
   <dependencies>
     <dependency>
-	  <groupId>rhino</groupId>
-	  <artifactId>js</artifactId>
-	  <version>1.7R1</version> 
-	</dependency>	  
+      <groupId>rhino</groupId>
+      <artifactId>js</artifactId>
+      <version>1.7R1</version> 
+    </dependency>     
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
     <defaultGoal>install</defaultGoal>
-    <sourceDirectory>${project.build.directory}/generated-src</sourceDirectory>   	
-	<resources>
+    <sourceDirectory>${project.build.directory}/generated-src</sourceDirectory>     
+    <resources>
       <resource>
         <directory>${project.build.directory}/generated-src/org/dojotoolkit/shrinksafe/resources</directory>
-		<targetPath>org/dojotoolkit/shrinksafe/resources</targetPath>
+        <targetPath>org/dojotoolkit/shrinksafe/resources</targetPath>
       </resource>
     </resources>
-	<pluginManagement>
-      <plugins>        
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <source>1.5</source>
-            <target>1.5</target>
-          </configuration>
-        </plugin>
-	  </plugins>
-	</pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -71,10 +60,10 @@
               <tasks>     
                 <untar compression="gzip" src="${project.build.directory}/dojo-release-${dojo.version}-shrinksafe.tar.gz" dest="${project.build.directory}">
                   <patternset>
-        		    <include name="**/src/**"/>
+                    <include name="**/src/**"/>
                   </patternset>
                   <globmapper from="dojo-release-${dojo.version}-shrinksafe/src/*" to="generated-src/*"/>
-                </untar>   			    
+                </untar>                
               </tasks>
             </configuration>
             <phase>process-sources</phase>
@@ -84,6 +73,17 @@
           </execution>
         </executions>
       </plugin>    
+
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+	    <addMavenDescriptor>false</addMavenDescriptor>
+	    <manifestFile>${project.build.directory}/generated-src/manifest</manifestFile>
+          </archive>
+        </configuration>
+      </plugin>
+
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
