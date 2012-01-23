@@ -8,7 +8,7 @@
   <description>Maven packaging of the Dojo Toolkit</description>
   <url>http://dojotoolkit.org</url>
   <properties>
-    <dojo.version>1.7.0</dojo.version>
+    <dojo.version>1.7.1</dojo.version>
   </properties>
   <issueManagement>
     <system>trac</system>
