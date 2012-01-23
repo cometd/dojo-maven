@@ -3,7 +3,7 @@
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
-      <version>1.7.0-SNAPSHOT</version>
+      <version>1.7.0</version>
       <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>org.dojotoolkit</groupId>
@@ -60,9 +60,9 @@
               <tasks>     
                 <untar compression="gzip" src="${project.build.directory}/dojo-release-${dojo.version}-shrinksafe.tar.gz" dest="${project.build.directory}">
                   <patternset>
-                    <include name="**/src/**"/>
+                    <include name="**/src/**" />
                   </patternset>
-                  <globmapper from="dojo-release-${dojo.version}-shrinksafe/src/*" to="generated-src/*"/>
+                  <globmapper from="dojo-release-${dojo.version}-shrinksafe/src/*" to="generated-src/*" />
                 </untar>                
               </tasks>
             </configuration>
