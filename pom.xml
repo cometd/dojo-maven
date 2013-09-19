@@ -38,10 +38,9 @@
     <developer>
       <id>gregw</id>
       <name>Greg Wilkins</name>
-      <email>gregw@apache.org</email>
-      <url>http://www.mortbay.com/mortbay/people/gregw</url>
-      <organization>Mort Bay Consulting</organization>
-      <organizationUrl>http://www.mortbay.com</organizationUrl>
+      <email>gregw@intalio.com</email>
+      <organization>Intalio</organization>
+      <organizationUrl>http://www.intalio.com</organizationUrl>
     </developer>
     <!-- obviously lots more to come here -->
   </developers>
@@ -99,10 +98,12 @@
     -->
   </distributionManagement>
   <scm>
-    <connection>scm:svn:http://svn.dojotoolkit.org/src/maven/trunk</connection>
-    <developerConnection>scm:svn:https://svn.dojotoolkit.org/src/maven/trunk</developerConnection>
-    <url>scm:svn:https://svn.dojotoolkit.org/src/maven/trunk</url>
+    <connection>scm:git:git://github.com/cometd/dojo-maven.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/cometd/dojo-maven.git</developerConnection>
+    <url>https://github.com/cometd/dojo-maven</url>
+    <tag>HEAD</tag>
   </scm>
+
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
@@ -110,16 +111,14 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
-          <tagBase>https://svn.dojotoolkit.org/src/maven/tags</tagBase>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <useReleaseProfile>false</useReleaseProfile>
           <goals>deploy</goals>
           <preparationGoals>clean install</preparationGoals>
           <arguments>-Pdojo-release</arguments>
           <mavenExecutorId>forked-path</mavenExecutorId>
-        </configuration>
-      </plugin>
-    </plugins>
+          </configuration>
+        </plugin>
+      </plugins>
     <pluginManagement>
       <!-- fix plugin versions for repeatable releases -->
       <plugins>
@@ -166,7 +165,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.0-beta-7</version>
+          <version>2.4.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
