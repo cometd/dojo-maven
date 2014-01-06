@@ -8,7 +8,7 @@
   <description>Maven packaging of the Dojo Toolkit</description>
   <url>http://dojotoolkit.org</url>
   <properties>
-    <dojo.version>1.9.1</dojo.version>
+    <dojo.version>1.9.2</dojo.version>
   </properties>
   <issueManagement>
     <system>trac</system>
@@ -75,7 +75,7 @@
       <layout>default</layout>
     </repository>
   </repositories>
-	
+
   <distributionManagement>
     <repository>
       <id>oss.sonatype.org</id>
