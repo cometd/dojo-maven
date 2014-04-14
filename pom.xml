@@ -7,13 +7,16 @@
   <name>Dojo Toolkit</name>
   <description>Maven packaging of the Dojo Toolkit</description>
   <url>http://dojotoolkit.org</url>
+
   <properties>
     <dojo.version>1.9.3</dojo.version>
   </properties>
+
   <issueManagement>
     <system>trac</system>
     <url>http://trac.dojotoolkit.org/</url>
   </issueManagement>
+
   <mailingLists>
     <mailingList>
       <name>dojo-interest</name>
@@ -34,6 +37,7 @@
       <archive>http://dojotoolkit.org/pipermail/dojo-checkins/</archive>
     </mailingList>
   </mailingLists>
+
   <developers>
     <developer>
       <id>gregw</id>
@@ -42,8 +46,8 @@
       <organization>Intalio</organization>
       <organizationUrl>http://www.intalio.com</organizationUrl>
     </developer>
-    <!-- obviously lots more to come here -->
   </developers>
+
   <licenses>
     <license>
       <name>Academic Free License v2.1</name>
@@ -54,6 +58,7 @@
       <url>http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE</url>
     </license>
   </licenses>
+
   <organization>
     <name>The Dojo Foundation</name>
     <url>http://dojotoolkit.org/foundation</url>
@@ -79,24 +84,16 @@
   <distributionManagement>
     <repository>
       <id>oss.sonatype.org</id>
-      <name>OSS Repository at sonatype</name>
-      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-      <layout>default</layout>
+      <name>OSS Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>snapshot.oss.sonatype.org</id>
-      <name>OSS Snapshot Repository at sonatype</name>
-      <url>http://oss.sonatype.org/content/repositories/dojo-snapshots/</url>
-      <layout>default</layout>
+      <id>oss.sonatype.org</id>
+      <name>OSS Snapshot Repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
-    <!-- none yet 
-    <site>
-      <id></id>
-      <name></name>
-      <url></url>
-    </site>
-    -->
   </distributionManagement>
+
   <scm>
     <connection>scm:git:git://github.com/cometd/dojo-maven.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/cometd/dojo-maven.git</developerConnection>
@@ -116,11 +113,10 @@
           <preparationGoals>clean install</preparationGoals>
           <arguments>-Pdojo-release</arguments>
           <mavenExecutorId>forked-path</mavenExecutorId>
-          </configuration>
-        </plugin>
-      </plugins>
+        </configuration>
+      </plugin>
+    </plugins>
     <pluginManagement>
-      <!-- fix plugin versions for repeatable releases -->
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -220,10 +216,12 @@
       </plugins>
     </pluginManagement>
   </build>
+
   <modules>
     <module>dojo</module>
     <module>dojo-war</module>
   </modules>
+
   <profiles>
     <profile>
       <id>dojo-release</id>
@@ -284,4 +282,5 @@
       </build>
     </profile>
   </profiles>
+
 </project>
