@@ -45,9 +45,9 @@
           <execution>
             <id>unpack</id>
             <configuration>
-              <tasks>      
+              <target>
                 <untar compression="gzip" src="${project.build.directory}/dojo-release-${dojo.version}.tar.gz" dest="${project.build.directory}" />
-              </tasks>
+              </target>
             </configuration>
             <phase>process-resources</phase>
             <goals>
@@ -62,6 +62,7 @@
            <descriptors>
             <descriptor>src/main/assembly/dojo.xml</descriptor>
           </descriptors>
+          <tarLongFileMode>gnu</tarLongFileMode>
         </configuration>
         <executions>
           <execution>
