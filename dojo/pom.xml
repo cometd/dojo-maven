@@ -3,7 +3,7 @@
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
-      <version>1.9.3</version>
+      <version>1.9.4-SNAPSHOT</version>
       <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>org.dojotoolkit</groupId>
