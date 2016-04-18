@@ -2,7 +2,7 @@
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
-      <version>1.11.2-SNAPSHOT</version>
+      <version>1.11.1-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -22,7 +22,6 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>wagon-maven-plugin</artifactId>
-        <version>1.0-beta-1</version>
         <executions>
           <execution>
             <id>download-dojo</id>

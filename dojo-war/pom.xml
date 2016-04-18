@@ -2,7 +2,7 @@
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
-      <version>1.11.2-SNAPSHOT</version>
+      <version>1.11.1-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -59,9 +59,9 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.mortbay.jetty</groupId>
+        <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>7.6.14.v20131031</version>
+        <version>9.3.8.v20160314</version>
         <configuration>
           <scanIntervalSeconds>0</scanIntervalSeconds>
           <webAppConfig>
