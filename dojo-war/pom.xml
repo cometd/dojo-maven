@@ -24,7 +24,6 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>wagon-maven-plugin</artifactId>
-        <version>1.0-beta-1</version>
         <executions>
           <execution>
             <id>download-dojo</id>
@@ -48,7 +47,7 @@
           <execution>
             <id>unpack</id>
             <configuration>
-              <tasks>      
+              <tasks>
                 <untar compression="gzip" src="${project.build.directory}/dojo-release-${dojo.version}.tar.gz" dest="${project.build.directory}" />
               </tasks>
             </configuration>

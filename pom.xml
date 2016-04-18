@@ -42,9 +42,9 @@
     <developer>
       <id>gregw</id>
       <name>Greg Wilkins</name>
-      <email>gregw@intalio.com</email>
-      <organization>Intalio</organization>
-      <organizationUrl>http://www.intalio.com</organizationUrl>
+      <email>gregw@webtide.com</email>
+      <organization>Webtide</organization>
+      <organizationUrl>https://webtide.com</organizationUrl>
     </developer>
   </developers>
 
@@ -63,23 +63,6 @@
     <name>The Dojo Foundation</name>
     <url>http://dojotoolkit.org/foundation</url>
   </organization>
-
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </snapshots>
-      <id>dojoSnapshots</id>
-      <name>Dojo Maven2 Snapshot Repository</name>
-      <url>http://oss.sonatype.org/content/groups/dojo/</url>
-      <layout>default</layout>
-    </repository>
-  </repositories>
 
   <distributionManagement>
     <repository>
