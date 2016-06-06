@@ -13,14 +13,8 @@
       <directory>${project.build.directory}/dojo-release-${dojo.version}</directory>
       <outputDirectory>/</outputDirectory>
       <includes>
-        <include>dojo/**</include>
-        <include>dijit/**</include>
-        <include>dojox/**</include>
+        <include>**</include>
       </includes>
-      <excludes>
-        <exclude>**/*.orig</exclude>
-        <exclude>**/*.rej</exclude>
-      </excludes>
     </fileSet>
   </fileSets>
 </assembly>
