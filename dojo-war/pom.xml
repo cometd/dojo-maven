@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
@@ -14,7 +16,6 @@
     <defaultGoal>install</defaultGoal>
     <plugins>
       <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <configuration>
             <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
@@ -41,7 +42,6 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
         <executions>
           <execution>
@@ -61,7 +61,6 @@
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.3.8.v20160314</version>
         <configuration>
           <scanIntervalSeconds>0</scanIntervalSeconds>
           <webAppConfig>

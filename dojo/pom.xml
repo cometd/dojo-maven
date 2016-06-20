@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
       <groupId>org.dojotoolkit</groupId>
       <artifactId>dojo-maven</artifactId>
@@ -9,7 +11,6 @@
   <artifactId>dojo</artifactId>
   <packaging>pom</packaging>
   <name>Dojo Toolkit :: Bundles</name>
-  <url>http://dojotoolkit.org</url>
 
   <properties>
     <dojo.build.profile>standard</dojo.build.profile>
@@ -39,7 +40,6 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
         <executions>
           <execution>
