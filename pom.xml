@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.dojotoolkit</groupId>
   <artifactId>dojo-maven</artifactId>
-  <version>1.9.11-SNAPSHOT</version>
+  <version>1.9.11</version>
   <packaging>pom</packaging>
   <name>Dojo Toolkit</name>
   <description>Maven packaging of the Dojo Toolkit</description>
@@ -81,7 +81,7 @@
     <connection>scm:git:git://github.com/cometd/dojo-maven.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/cometd/dojo-maven.git</developerConnection>
     <url>https://github.com/cometd/dojo-maven</url>
-    <tag>HEAD</tag>
+    <tag>dojo-maven-1.9.11</tag>
   </scm>
 
   <build>
