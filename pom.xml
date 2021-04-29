@@ -194,6 +194,7 @@
 
   <modules>
     <module>dojo</module>
+    <module>dojo-src</module>
     <module>dojo-war</module>
   </modules>
 
